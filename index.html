@@ -1,0 +1,190 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initiql-scale=1.0"/>
+        <title>Portfolio- Gérard Nyembo Kikoko</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        
+        <div class="cv">
+            <aside class="sidebar">
+                <div class="photo">
+                    <img src="IMG-20250210-WA0294.jpg" alt="Photo de profile de Gérard Nyembo Kikoko" class="photo-profil">
+                </div>
+                <div class="name">
+                    
+                    <span class="last">Nyembo Kikoko</span><br>
+                    <span class="first">Gérard</span>
+                 
+                </div>
+                <section>
+                    <h2>Coordonnées</h2>
+                        <p><strong>📍Adresse:</strong> 16 Avenue Frangipanier ,Quartier Bel-Air,Commune kampemba, Ville de lubumbashi;RDC</p>
+                        <p><strong>☎Phone:</strong> +243831859634</p>
+                        <p><strong>📧Email:</strong><a href="mailto:gerardnyembo02@gmail.com">gerardnyembo02@gmail.com</a></p>
+                        <p><strong>📷Instagram:</strong><a href="https://instagram.com/drareg_king" target="_blank">@drareg_king</a></p>
+                </section>
+
+                <section>
+                    <h2>Langues parlées</h2>
+                    <div class="languages-bar">
+                        <div class="languages">
+                            <span>Français</span>
+                            <div class="bar"><div class="fill" data-fill="95"=""></div></div>
+                        </div>
+                        <div class="languages">
+                            <span>Anglais</span>
+                            <div class="bar"><div class="fill" data-fill="80"></div></div>
+                        </div> <div class="languages">
+                            <span>Swahili</span>
+                            <div class="bar"><div class="fill" data-fill="65"></div></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="Loisirs">
+                    <h2>Centre d'interêt</h2>
+                    <ul>
+                        <li>Écriture</li>
+                        <li>Lecture</li>
+                        <li>Jouer au échecs</li>
+                        <li>Jeux vidéo</li>
+                        <li>Programmation personnelle</li>
+                    </ul>
+                </section>
+            </aside>
+
+            <main class="content">
+                <section class="Résumé">
+                    <h2>Profil</h2>
+                    <p>Développeur web et logiciels polyvalent, capable d'intervenir sur des project front-end et logiciels. Compétences en dynamique(HTML5,CSS,JS,PHP,MySQL)et en collaboration technique.À l'aise dans un environement évolutif,avec une approche centrée utilisateur. </p>
+                </section>
+                <section>
+                    <h2>Compétences clés</h2>
+                            <ul class="badge-style">
+                                <li>Charismatique</li>
+                                <li>Bonne capacité d'adaptation</li>
+                                <li>Travail en équipe</li>
+                                <li>Autonomie et rigueur</li>
+                                <li>Créativité</li>
+                                <li>Resolution des problèmes complexes</li>
+                                <li>Esprit d'analyse</li>
+                            </ul>
+                </section>
+                <section>
+                    <h2>Expérience</h2>
+                            <ul>
+                                <li>Délégué de classe <b>2020-2023</b></li>
+                                <li>Travailler sur une version du Jeux tic tac toe</li>
+                                <li>Création d'une petite application de gestion d'entreprise</li>
+                                <li>Commencer à créer des site web en 2025</li>
+                            </ul>
+                </section>
+                <section>
+                    <h2><u>Études</u></h2>
+                    <p><ul>
+                        <li>Diplômé d'Ètat 2024 en RDC. </li>
+                        <li>Actuellement etudiant à l'univresité nouveaux horizon </li>
+                    </ul></p>
+                </section>
+
+                <section>
+                    <section class="Certification">
+                        <h2>Certifications</h2>
+                        <p><b>Langages de programmation:</b></p>
+                        <ul class="custom-icons">
+                            <li>HTML5</li>
+                            <li>PHYTON</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>CSS</li>
+                            <li>Java script</li>
+                        </ul>
+                </section>
+            </main>
+        </div>
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          const languageBars = document.querySelectorAll('.language .fill');
+      
+          function animateBarsOnScroll() {
+            const triggerBottom = window.innerHeight * 0.85;
+      
+            languageBars.forEach(bar => {
+              const barTop = bar.getBoundingClientRect().top;
+              if (barTop < triggerBottom && !bar.classList.contains('animated')) {
+                const width = bar.style.width;
+                bar.style.setProperty('--width', width);
+                bar.style.width = width;
+                bar.classList.add('animated');
+              }
+            });
+          }
+      
+          window.addEventListener('scroll', animateBarsOnScroll);
+          animateBarsOnScroll();
+      
+          // Highlight on section hover
+          document.querySelectorAll('main section').forEach(section => {
+            section.addEventListener('mouseenter', () => {
+              section.style.backgroundColor = '#f9f9f9';
+            });
+            section.addEventListener('mouseleave', () => {
+              section.style.backgroundColor = 'transparent';
+            });
+          });
+      
+          // Scroll to top button
+          const topBtn = document.createElement('button');
+          topBtn.textContent = '↑ Top';
+          Object.assign(topBtn.style, {
+            position: 'fixed',
+            bottom: '20px',
+            right: '20px',
+            padding: '10px 15px',
+            background: 'orange',
+            color: '#fff',
+            border: 'none',
+            borderRadius: '30px',
+            cursor: 'pointer',
+            display: 'none',
+            boxShadow: '0 2px 6px rgba(0,0,0,0.2)',
+            zIndex: 999
+          });
+          document.body.appendChild(topBtn);
+      
+          topBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+      
+          window.addEventListener('scroll', () => {
+            topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+          });
+        });
+      </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const fills = document.querySelectorAll('.language .fill');
+      
+          function animateBarsOnScroll() {
+            const triggerBottom = window.innerHeight * 0.9;
+      
+            fills.forEach(fill => {
+              const barTop = fill.getBoundingClientRect().top;
+              if (barTop < triggerBottom && !fill.classList.contains('animated')) {
+                const percent = fill.getAttribute('data-fill');
+                fill.style.width = percent + '%';
+                fill.classList.add('animated');
+              }
+            });
+          }
+      
+          window.addEventListener('scroll', animateBarsOnScroll);
+          window.addEventListener('load', animateBarsOnScroll);
+        });
+      </script>
+      
+          
+    </body>
+</html>
